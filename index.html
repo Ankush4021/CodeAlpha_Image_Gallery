@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Designing Image Gallery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: #f4f4f4;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .gallery-container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+        }
+        .gallery-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-top: 20px;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            margin-bottom: 30px;
+            color: #333;
+            letter-spacing: 2px;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+            background: #eee;
+            transition: transform 0.2s;
+        }
+        .gallery-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 24px rgba(0,0,0,0.15);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+            transition: opacity 0.3s;
+        }
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.55);
+            color: #fff;
+            padding: 12px;
+            font-size: 1.1rem;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .gallery-item:hover .gallery-caption {
+            opacity: 1;
+        }
+        @media (max-width: 600px) {
+            .gallery-title {
+                font-size: 1.5rem;
+            }
+            .gallery-item img {
+                height: 140px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery-container">
+        <div class="gallery-title">Designing Image Gallery</div>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Nature 1">
+                <div class="gallery-caption">Mountain View</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://plus.unsplash.com/premium_photo-1668110864450-48a6591c3a22?q=80&w=1904&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Nature 2">
+                <div class="gallery-caption">Forest Path</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1673262791079-ff42c05c9690?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Nature 3">
+                <div class="gallery-caption">Desert Dunes</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://plus.unsplash.com/premium_photo-1664286886152-ee4408d4d301?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Nature 4">
+                <div class="gallery-caption">Lake Reflection</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80" alt="Nature 5">
+                <div class="gallery-caption">Sunset Beach</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1660390648183-b57a5aacb28b?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Nature 6">
+                <div class="gallery-caption">Green Woods</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://plus.unsplash.com/premium_photo-1675827055694-010aef2cf08f?q=80&w=1912&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Nature 7">
+                <div class="gallery-caption">A Waterfall</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://plus.unsplash.com/premium_photo-1671379456866-57e60cf76bb7?q=80&w=1889&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Nature 8">
+                <div class="gallery-caption">The Rock</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
